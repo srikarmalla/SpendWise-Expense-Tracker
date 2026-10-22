@@ -1298,3 +1298,109 @@
     width: 100%;
   }
 }
+
+
+.transaction-form-panel,
+.transaction-form-panel * {
+  box-sizing: border-box;
+}
+
+.transaction-form-panel form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.transaction-form-panel form label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+  color: midnightblue;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.transaction-form-panel form input,
+.transaction-form-panel form select,
+.transaction-form-panel form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid lavender;
+  border-radius: 8px;
+  background: white;
+  color: midnightblue;
+  font: inherit;
+}
+
+.transaction-form-panel form textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.transaction-form-panel form input:focus,
+.transaction-form-panel form select:focus,
+.transaction-form-panel form textarea:focus {
+  outline: none;
+  border-color: mediumpurple;
+  box-shadow: 0 0 0 3px lavender;
+}
+
+.transaction-form-panel form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.transaction-form-panel form .form-actions,
+.transaction-form-panel form .form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.transaction-form-panel form button {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .form-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .transaction-form-panel {
+    max-width: 100%;
+    max-height: calc(100vh - 24px);
+    padding: 20px 16px;
+  }
+
+  .transaction-form-panel form .form-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .transaction-form-panel form .form-actions,
+  .transaction-form-panel form .form-buttons {
+    justify-content: stretch;
+  }
+
+  .transaction-form-panel form .form-actions button,
+  .transaction-form-panel form .form-buttons button {
+    flex: 1 1 auto;
+  }
+}
