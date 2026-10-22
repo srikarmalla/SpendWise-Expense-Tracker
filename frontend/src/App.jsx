@@ -1,38 +1,10 @@
 import { useEffect, useState } from "react";
-import {
-  LayoutDashboard,
-  ArrowLeftRight,
-  Wallet,
-  Settings,
-  UserRound,
-  Bell,
-  Plus,
-  Search,
-  TrendingUp,
-  TrendingDown,
-  CreditCard,
-  Pencil,
-  Trash2,
-  CalendarDays,
-  RefreshCw,
-} from "lucide-react";
-import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  PieChart,
-  Pie,
-  Cell,
-} from "recharts";
+import { LayoutDashboard, ArrowLeftRight, Wallet, Settings, UserRound, Bell, Plus, Search, TrendingUp, TrendingDown, CreditCard, Pencil, Trash2, CalendarDays, RefreshCw,} from "lucide-react";
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell,} from "recharts";
 import TransactionForm from "./TransactionForm";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/transactions";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/transactions";
 
 const CATEGORY_COLORS = [
   "mediumpurple",
